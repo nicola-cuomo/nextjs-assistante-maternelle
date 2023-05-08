@@ -1,4 +1,4 @@
-import prismaClient from "@/utils/prismaClient";
+import prismaClient from "@/libs/prismaClient";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function DELETE(
@@ -6,7 +6,7 @@ export async function DELETE(
   context: { params: { babyId: string } }
 ) {
   await prismaClient.baby.delete({
-    where: { id: Number.parseInt(context.params.babyId) },
+    where: { id: context.params.babyId },
   });
   return new NextResponse(null, { status: 204 });
 }

@@ -1,4 +1,4 @@
-import prismaClient from '@/utils/prismaClient'
+import prismaClient from '@/libs/prismaClient'
 import Link from 'next/link'
 
 async function getBabies() {

@@ -1,4 +1,4 @@
-import prismaClient from '@/utils/prismaClient';
+import prismaClient from '@/libs/prismaClient';
 import { redirect } from 'next/navigation';
 import { string } from 'zod';
 
